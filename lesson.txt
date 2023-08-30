@@ -1,0 +1,45 @@
+The cells inside the notebook can be of code cells or markdown cells.
+In code cells, you can enter python code and in markdown cells, you can enter text.
+We can use HTML to enter content into text cells.
+We can add images through img tag. 
+We can set section headings by using "#".
+The number of # represents the level of headings.
+You can use upto 5# means h5.
+
+nunique() method() is useful method that can be used to find the number of unique elements in a column or dataframe.
+syntax:- df.nunique() or df[column_name].nunique().
+value_counts() method is used to count the total occurrences of a unique values in a column of a dataframe.
+syntax:- df[column_name].value_counts()
+
+IMPORTANT---IMPORTANT TO UNDERSTAND
+themes_by_year = sets_df.groupby("year").agg({'theme_id': pd.Series.nunique })
+Here, we group the data on the basis of the unique values of 'year'.
+Then, we apply agg() method on it.
+'theme_id' is the column name of the sets_df dataframe. 
+On this column', we are applying the aggregate function "pd.Series.nunique".
+It count the total number of unique elements in 'theme_id' within each group.
+
+ax1 = plt.gca()
+gca stands for "get current axes".
+gca() method returns the current axes instance.
+
+ax2 = ax1.twinx()
+Here, we create a new axes instance(ax2) that is going to share the same x-axis of existing axes(ax1) using twinx() method.
+We are creating two axes because we want to plot two data on same charts but each have different scales for y-axis,
+but have same x-axis.
+
+axes is a rectangular shaped container which contains data elements that are the basis of creating graph.
+Within the container, we create visualisation such as charts, line etc.
+
+Database schema is just how the database is organised.
+Many relational database(database in which data is organised in a tabular format. It shows the relation between data.)
+
+merge() method is used to combine two dataframes into one.
+syntax:- merge_df = pd.merge(first_dataframe, second_dataframe, on="column_name")
+on argument is set to a column name that is common to both the dataframes.
+To get access to the values of a series, we need to use the series's "values" attribute.
+
+NOTE:- xtics and yticks are terms used in data visualisation.
+They are the tick marks on the x-axis and y-axis. They can be in the form of labels.
+They help us to understand the value of the data being plotted on x-axis and y-axis respectively.
+We can use rotation argument to make the ticks rotable, so they don't overlap to each other.
